@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biodata Pribadi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      background-image: radial-gradient(circle at top left, rgba(255,255,255,0.1) 2%, transparent 0), 
+                        radial-gradient(circle at bottom right, rgba(255,255,255,0.1) 2%, transparent 0);
+      background-size: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .biodata-container {
+      background-color: rgb(112, 246, 230);
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .biodata-container:hover {
+      transform: scale(1.015);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #5e35b1;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    img.profile {
+      display: block;
+      width: 160px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin: 0 auto 25px auto;
+      border: 5px solid #1768d2;
+      box-shadow: 0 0 0 5px #5e35b1, 0 0 15px #a777e3;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 5px #5e35b1, 0 0 15px #a777e3; }
+      50% { box-shadow: 0 0 0 8px #7c4dff, 0 0 25px #b388ff; }
+      100% { box-shadow: 0 0 0 5px #5e35b1, 0 0 15px #a777e3; }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: top;
+      color: #333;
+      font-size: 16px;
+    }
+
+    td.label {
+      font-weight: 600;
+      color: #5e35b1;
+      width: 180px;
+      white-space: nowrap;
+    }
+
+    td.label::before {
+      content: "🔹 ";
+      color: #5e35b1;
+    }
+
+    @media (max-width: 600px) {
+      .biodata-container {
+        padding: 20px;
+      }
+
+      td.label {
+        width: 120px;
+      }
+
+      img.profile {
+        width: 120px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="biodata-container">
+    <h2>Biodata Pribadi</h2>
+    <img src="C:\Users\Asus\Pictures\Tioslebew.jpeg" alt="Foto Profil" class="profile" />
+    <table>
+      <tr>
+        <td class="label">Nama</td>
+        <td>: Muhammad Tiorahman Hakim</td>
+      </tr>
+      <tr>
+        <td class="label">Tempat, Tanggal Lahir</td>
+        <td>: Jakarta, 13 Maret 2004</td>
+      </tr>
+      <tr>
+        <td class="label">Jenis Kelamin</td>
+        <td>: Laki-laki</td>
+      </tr>
+      <tr>
+        <td class="label">Email</td>
+        <td>: rahmantiohkim@gmail.com</td>
+      </tr>
+      <tr>
+        <td class="label">Telepon</td>
+        <td>: 0813-8878-0448</td>
+      </tr>
+      <tr>
+        <td class="label">Hobi</td>
+        <td>: Mengcoding, Rancang Bangun, dan Berenang</td>
+      </tr>
+      <tr>
+        <td class="label">Makanan Kesukaan</td>
+        <td>: Dimsum dan Mie Goreng</td>
+      </tr>
+      <tr>
+        <td class="label">Cita-cita</td>
+        <td>: Penelitian dan Teknisi</td>
+      </tr>
+      <tr>
+        <td class="label">Kuliah</td>
+        <td>: Universitas Islam Negeri, Jurusan Fisika</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
